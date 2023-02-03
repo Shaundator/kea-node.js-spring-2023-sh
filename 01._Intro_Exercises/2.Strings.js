@@ -66,6 +66,8 @@ const temporaryExercise7 = fact.split("")
 temp[location] = "J"
 const exercise7 = temp.join("")
 
+const factCapitalizedJ = fact.replace("javascript", "Javascript")
+
 console.log(exercise7)
 
 
