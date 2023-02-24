@@ -1,9 +1,7 @@
-const app = require("express")();
+const express = require("express");
+const app = express();
 
-const bodyParser = require("body-parser");
-
-app.use(bodyParser.json());
-app.listen(8080);
+app.use(express.json())
 
 const birds = [
     {id: 1 , name: "Bird1", location: "Somewhere1"},
@@ -86,4 +84,9 @@ app.delete("/birds/:id", (req, res) => {
         birds.splice(birdIndex, 1)
         res.send(`Bird with the ID: (${birdId}) has been deleted...`)
     }
+})
+
+
+app.listen(8080, () => {
+    console.log("Server is running on port", 8080)
 })
