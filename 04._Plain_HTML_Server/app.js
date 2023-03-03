@@ -11,6 +11,10 @@ app.get("/tanks", (req, res) => {
     res.sendFile(__dirname + "/public/tanks/tanks.html");
 })
 
+app.get("/museumguards", (req, res) => {
+    res.sendFile(__dirname + "/public/museumguards/museumguards.html");
+})
+
 const PORT = 8080;
 app.listen(PORT, (error) => {
     if (error) {
